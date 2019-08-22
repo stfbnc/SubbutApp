@@ -1,0 +1,163 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ranking_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/tabs_color">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/pullToRefreshRanking"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/ranking_table"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="20dp">
+
+            <TextView
+                android:id="@+id/ranking_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="@dimen/res_text_size"
+                android:textColor="@android:color/black"
+                android:text="@string/ranking_title"
+                android:layout_marginBottom="20dp"/>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fillViewport="true"
+                android:measureAllChildren="false"
+                android:scrollbars="none">
+
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TableLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:id="@+id/ranking_header"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp">
+
+                        <TableRow
+                            android:id="@+id/ranking_tags_row"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/player_num_tag"
+                                android:layout_width="@dimen/ranking_box_width"
+                                android:layout_height="wrap_content"
+                                android:gravity="start"
+                                android:textSize="@dimen/pl_text_size"/>
+
+                            <TextView
+                                android:id="@+id/player_name_tag"
+                                android:layout_width="@dimen/ranking_box_player_width"
+                                android:layout_height="wrap_content"
+                                android:gravity="start"
+                                android:textSize="@dimen/pl_text_size"/>
+
+                            <TextView
+                                android:id="@+id/player_points_tag"
+                                android:layout_width="@dimen/ranking_box_width"
+                                android:layout_height="wrap_content"
+                                android:gravity="end"
+                                android:textStyle="bold"
+                                android:textSize="@dimen/pl_text_size"
+                                android:textColor="@android:color/black"
+                                android:text="@string/ranking_points" />
+
+                            <TextView
+                                android:id="@+id/player_num_matches_tag"
+                                android:layout_width="@dimen/ranking_box_width"
+                                android:layout_height="wrap_content"
+                                android:gravity="end"
+                                android:textStyle="bold"
+                                android:textSize="@dimen/pl_text_size"
+                                android:textColor="@android:color/black"
+                                android:text="@string/ranking_num_matches"/>
+
+                            <TextView
+                                android:id="@+id/player_wins_tag"
+                                android:layout_width="@dimen/ranking_box_width"
+                                android:layout_height="wrap_content"
+                                android:gravity="end"
+                                android:textStyle="bold"
+                                android:textSize="@dimen/pl_text_size"
+                                android:textColor="@android:color/black"
+                                android:text="@string/ranking_wins"/>
+
+                            <TextView
+                                android:id="@+id/player_draws_tag"
+                                android:layout_width="@dimen/ranking_box_width"
+                                android:layout_height="wrap_content"
+                                android:gravity="end"
+                                android:textStyle="bold"
+                                android:textSize="@dimen/pl_text_size"
+                                android:textColor="@android:color/black"
+                                android:text="@string/ranking_draws"/>
+
+                            <TextView
+                                android:id="@+id/player_defeats_tag"
+                                android:layout_width="@dimen/ranking_box_width"
+                                android:layout_height="wrap_content"
+                                android:gravity="end"
+                                android:textStyle="bold"
+                                android:textSize="@dimen/pl_text_size"
+                                android:textColor="@android:color/black"
+                                android:text="@string/ranking_defeats"/>
+
+                            <TextView
+                                android:id="@+id/player_scored_goals_tag"
+                                android:layout_width="@dimen/ranking_box_width2"
+                                android:layout_height="wrap_content"
+                                android:gravity="end"
+                                android:textStyle="bold"
+                                android:textSize="@dimen/pl_text_size"
+                                android:textColor="@android:color/black"
+                                android:text="@string/ranking_scored_goals"/>
+
+                            <TextView
+                                android:id="@+id/player_conceded_goals_tag"
+                                android:layout_width="@dimen/ranking_box_width2"
+                                android:layout_height="wrap_content"
+                                android:gravity="end"
+                                android:textStyle="bold"
+                                android:textSize="@dimen/pl_text_size"
+                                android:textColor="@android:color/black"
+                                android:text="@string/ranking_conceded_goals"/>
+
+                        </TableRow>
+
+                    </TableLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recycle_ranking"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"/>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</LinearLayout>

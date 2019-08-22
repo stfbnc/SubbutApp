@@ -1,0 +1,96 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/matches_league_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/tabs_color">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/pullToRefreshMatchesLeague"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:measureAllChildren="false"
+            android:scrollbars="none">
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/matches_league_table"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="20dp">
+
+                <TextView
+                    android:id="@+id/quarters_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/res_text_size"
+                    android:textColor="@android:color/black"
+                    android:layout_marginBottom="5dp"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycle_quarters"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_marginBottom="5dp"/>
+
+                <TextView
+                    android:id="@+id/semifinals_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/res_text_size"
+                    android:textColor="@android:color/black"
+                    android:layout_marginBottom="5dp"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycle_semifinals"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_marginBottom="5dp"/>
+
+                <TextView
+                    android:id="@+id/first_final_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/res_text_size"
+                    android:textColor="@android:color/black"
+                    android:layout_marginBottom="5dp"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycle_first_final"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_marginBottom="5dp"/>
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</FrameLayout>

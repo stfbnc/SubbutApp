@@ -1,0 +1,20 @@
+{
+  "CHAMPIONSHIP": [
+    {
+      "PLAYER": [string] (player name),
+      "IMG": [string] (team image name without extension)
+    }
+  ],
+  "LEAGUE": [
+    {
+      "PLAYER": [string] (player name),
+      "IMG": [string] (team image name without extension)
+    }
+  ],
+  "CUP": [
+    {
+      "PLAYER": [string] (player name),
+      "IMG": [string] (team image name without extension)
+    }
+  ]
+}

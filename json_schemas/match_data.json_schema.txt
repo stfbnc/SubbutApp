@@ -1,0 +1,108 @@
+{
+  "CHAMPIONSHIP": [
+    {
+      "DAY_NUM": [string] (number of the day),
+      "MATCHES": [
+        {
+          "PL1": [string] (player 1),
+          "RES1": [int] (-1 if no result),
+          "PL2": [string] (player 2),
+          "RES2": [int] (-1 if no result),
+          "LIVE1": [int] (0 if not live, 1 if live),
+          "DETAILS": [
+            {
+              "FIRST_OR_SECOND": [string] ("FIRST"for first match, "SECOND" for return match),
+              "GOALS": [
+                {
+                  "MIN": [int] (score minute),
+                  "PLAYER": [int] (1 for player 1, 2 for player 2),
+                  "TYPE": [string] (goal type, can be "GOAL", "AUTOGOAL", "PENALTY", "PENALTY_FAILED")
+                }
+              ],
+              "CARDS": [
+                {
+                  "MIN": [int] (card minute),
+                  "PLAYER": [int] (1 for player 1, 2 for player 2),
+                  "TYPE": [string] (card type, can be "YELLOW", "RED")
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "REST": [string] ("" if no resting player)
+    }
+  ],
+  "CUP": [
+    {
+      "MATCH_TYPE": [string] (match type, can be "QUARTI", "SEMIFINALI", "FINALE"),
+      "MATCHES": [
+        {
+          "PL1": [string] (player 1),
+          "RES1": [int] (first match result, -1 if no result),
+          "RES3": [int] (return match result, -1 if no result),
+          "PL2": [string] (player 2),
+          "RES2": [int] (first match result, -1 if no result),
+          "RES4": [int] (return match result, -1 if no result),
+          "LIVE1": [int] (first match, 0 if not live, 1 if live),
+          "LIVE2": [int] (return match, 0 if not live, 1 if live),
+          "DETAILS": [
+            {
+              "FIRST_OR_SECOND": [string] ("FIRST"for first match, "SECOND" for return match),
+              "GOALS": [
+                {
+                  "MIN": [int] (score minute),
+                  "PLAYER": [int] (1 for player 1, 2 for player 2),
+                  "TYPE": [string] (goal type, can be "GOAL", "AUTOGOAL", "PENALTY", "PENALTY_FAILED")
+                }
+              ],
+              "CARDS": [
+                {
+                  "MIN": [int] (card minute),
+                  "PLAYER": [int] (1 for player 1, 2 for player 2),
+                  "TYPE": [string] (card type, can be "YELLOW", "RED")
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "LEAGUE": [
+    {
+      "MATCH_TYPE": [string] (match type, can be "QUARTI", "SEMIFINALI", "FINALE"),
+      "MATCHES": [
+        {
+          "PL1": [string] (player 1),
+          "RES1": [int] (first match result, -1 if no result),
+          "RES3": [int] (return match result, -1 if no result),
+          "PL2": [string] (player 2),
+          "RES2": [int] (first match result, -1 if no result),
+          "RES4": [int] (return match result, -1 if no result),
+          "LIVE1": [int] (first match, 0 if not live, 1 if live),
+          "LIVE2": [int] (return match, 0 if not live, 1 if live),
+          "DETAILS": [
+            {
+              "FIRST_OR_SECOND": [string] ("FIRST"for first match, "SECOND" for return match),
+              "GOALS": [
+                {
+                  "MIN": [int] (score minute),
+                  "PLAYER": [int] (1 for player 1, 2 for player 2),
+                  "TYPE": [string] (goal type, can be "GOAL", "AUTOGOAL", "PENALTY", "PENALTY_FAILED")
+                }
+              ],
+              "CARDS": [
+                {
+                  "MIN": [int] (card minute),
+                  "PLAYER": [int] (1 for player 1, 2 for player 2),
+                  "TYPE": [string] (card type, can be "YELLOW", "RED")
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

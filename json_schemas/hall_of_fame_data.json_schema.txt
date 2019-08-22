@@ -1,0 +1,20 @@
+{
+  "CHAMPIONSHIP": [
+    {
+      "PLAYER": [string] (player name),
+      "WINS": [int] (number of won competitions)
+    }
+  ],
+  "LEAGUE": [
+    {
+      "PLAYER": [string] (player name),
+      "WINS": [int] (number of won competitions)
+    }
+  ],
+  "CUP": [
+    {
+      "PLAYER": [string] (player name),
+      "WINS": [int] (number of won competitions)
+    }
+  ]
+}

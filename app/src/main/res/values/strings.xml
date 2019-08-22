@@ -1,0 +1,107 @@
+<resources>
+    <!--App-->
+    <string name="app_name">SubbutApp</string>
+    <!--Drawer List-->
+    <string name="navigation_drawer_item1">Campionato</string>
+    <string name="navigation_drawer_item2">Champions League</string>
+    <string name="navigation_drawer_item3">Coppa Italia</string>
+    <string name="navigation_drawer_item4">Regolamento</string>
+    <!--Drawer open and close-->
+    <string name="drawer_open">Tab a scomparsa aperta</string>
+    <string name="drawer_closed">Tab a scomparsa chiusa</string>
+    <!--Tabs names-->
+    <string name="matches">Giornata</string>
+    <!--Json tags-->
+    <string name="championship_tag">CHAMPIONSHIP</string>
+    <string name="cup_tag">CUP</string>
+    <string name="league_tag">LEAGUE</string>
+    <string name="match_type_tag">MATCH_TYPE</string>
+    <string name="day_num_tag">DAY_NUM</string>
+    <string name="matches_tag">MATCHES</string>
+    <string name="left_player_tag">PL1</string>
+    <string name="left_res_tag">RES1</string>
+    <string name="left_res_second_tag">RES3</string>
+    <string name="right_player_tag">PL2</string>
+    <string name="right_res_tag">RES2</string>
+    <string name="right_res_second_tag">RES4</string>
+    <string name="rest_player_tag">REST</string>
+    <string name="live1_tag">LIVE1</string>
+    <string name="live2_tag">LIVE2</string>
+    <string name="details_tag">DETAILS</string>
+    <string name="first_or_second_tag">FIRST_OR_SECOND</string>
+    <string name="goals_tag">GOALS</string>
+    <string name="cards_tag">CARDS</string>
+    <string name="min_tag">MIN</string>
+    <string name="player_tag">PLAYER</string>
+    <string name="type_tag">TYPE</string>
+    <string name="img_tag">IMG</string>
+    <string name="wins_tag">WINS</string>
+    <!--Matches-->
+    <string name="bundle_tab">DayNum</string>
+    <string name="rest_str">Riposa:</string>
+    <string name="bundle_details_tag">matchInfo</string>
+    <string name="bundle_single_match_tag">singleMatch</string>
+    <string name="bundle_competition_type_tag">competitionType</string>
+    <!--Ranking-->
+    <string name="halloffame_ranking_title">ALBO D\'ORO</string>
+    <string name="scored_ranking_title">MIGLIOR ATTACCO</string>
+    <string name="defense_ranking_title">MIGLIOR DIFESA</string>
+    <string name="ranking_title">CLASSIFICA</string>
+    <string name="ranking_player">GIOCATORE</string>
+    <string name="ranking_points">P</string>
+    <string name="ranking_num_matches">G</string>
+    <string name="ranking_wins">V</string>
+    <string name="ranking_draws">N</string>
+    <string name="ranking_defeats">P</string>
+    <string name="ranking_scored_goals">GF</string>
+    <string name="ranking_conceded_goals">GS</string>
+    <!--Tournaments-->
+    <string name="quarters">QUARTI</string>
+    <string name="semifinals">SEMIFINALI</string>
+    <string name="first_final">FINALE</string>
+    <!--Rules-->
+    <string name="rules">
+        <b>1. Regole fondamentali applicabili ad ogni caso</b>\n\n
+        - non si può toccare la palla più di 3 volte consecutive\n
+        - ogni squadra deve avere 11 giocatori compreso il portiere\n
+        - ci sono 2 tempi\n
+        - ogni tempo dura 10 min più ultima azione\n
+        - il giocatore può essere colpito solo ed esclusivamente con il dito non a contatto con esso, e l\'unghia rivolta verso di esso, pena il passaggio di palla all\'avversario (no schicchera) senza trascinamenti in ogni caso\n
+        - saranno introdotti i cartellini (giallo secondo fallo cumulativo) rosso quarto fallo cumulativo (giocatore fuori)\n
+        - al liscio del giocatore la palla passa all\'avversario\n
+        - ogni volta che possono essere mossi dei giocatori prima attacco poi difesa\n
+        - ogni volta che possono essere mossi dei giocatori va dichiarato da subito se si vuole muovere o no e quanto se ne muovono entro il limite massimo di spostamenti\n
+        - è vietato muovere più di un giocatore contemporaneamente\n
+        - il giocatore che batte un qualsiasi calcio da fermo deve essere scelto prima di effettuare spostamenti\n\n
+        <b>2. Calci da fermo</b>\n\n
+        <b>2.1 Punizioni</b>\n
+         - in caso di punizione dentro l\'area di tiro, si può posizionare una barriera di tre giocatori distante 10 cm dal punto di battuta\n
+         - punizione se fallo di mano (giuocatre sdraiato sul campo colpito)\n
+         - punizione se calciatore colpito da un giuocatore avversario\n
+         - punizione se l\'umano prende la palla con la mano\n
+         - punizione di seconda in area se il portiere para o colpisce la palla fuori dall\'area piccola\n
+         - in caso di fuorigioco\n
+         - ogni giocatore può spostare tre giocatori\n
+        <b>2.2 Calci d\'angolo</b>\n
+         - ogni giocatore può fare tre spostamenti\n
+         - niente fuorigioco\n
+         - il calcio d\'angolo vale solo se il giocatore colpito è all\'interno dell\'area di tiro\n
+        <b>2.3 Rimesse dal fondo</b>\n
+         - ogni giocatore può fare tre spostamenti\n
+         - se la palla va nell\'area di tiro avversaria passa all\'avversario, anche se tocca un giocatore all\'interno dell\'area di tiro avversaria\n
+         - il rinvio dalla rimessa di fondo deve partire dal limite dell\'area piccola\n
+        <b>2.4 Falli laterali</b>\n
+         - ogni giocatore può fare uno spostamento\n
+         - non c\'è il fuorigioco\n\n
+        <b>3. Portiere</b>\n\n
+        - non ci possono essere alla fine dell\'azione giocatori all\'interno dell\'area piccola e vanno spostati immediatamente fuori\n\n
+        <b>4. Fuorigioco</b>\n\n
+        - quando l\'avversario liscia la palla, solo un giocatore in fuorigioco potrà prendere la palla\n
+        - il fuorigioco vale solo dalla line di metà campo\n\n
+        <b>5. Sostituzioni</b>\n\n
+        - quando un giocatore si rompe si sostituisce con un altro\n
+        - se non ci sono altri giocatori di quella stessa squadra disponibili, si gioca con giocatori in meno\n\n
+        <b>6. Goals</b>\n\n
+        -\n
+    </string>
+</resources>

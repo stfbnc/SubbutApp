@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="?android:attr/buttonBarStyle"
+    android:id="@+id/bottom_btns"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:layout_gravity="center_horizontal"
+    android:orientation="horizontal">
+
+    <ImageButton
+        android:id="@+id/scored_ranking"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:src="@drawable/scored_white"
+        android:background="@color/tabs_color"
+        android:padding="5dp"/>
+
+    <ImageButton
+        android:id="@+id/defense_ranking"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:src="@drawable/defense_white"
+        android:background="@color/tabs_color"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="5dp"/>
+
+    <ImageButton
+        android:id="@+id/all_matches"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:src="@drawable/matches"
+        android:background="@color/tabs_color"
+        android:padding="14dp"/>
+
+    <ImageButton
+        android:id="@+id/ranking"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:src="@drawable/rank_white"
+        android:background="@color/tabs_color"
+        android:padding="15dp"/>
+
+    <ImageButton
+        android:id="@+id/hall_of_fame"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:src="@drawable/hall_of_fame_white"
+        android:background="@color/tabs_color"
+        android:padding="15dp"/>
+
+</LinearLayout>
