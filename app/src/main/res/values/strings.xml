@@ -67,7 +67,7 @@
         - ci sono 2 tempi\n
         - ogni tempo dura 10 min più ultima azione\n
         - il giocatore può essere colpito solo ed esclusivamente con il dito non a contatto con esso, e l\'unghia rivolta verso di esso, pena il passaggio di palla all\'avversario (no schicchera) senza trascinamenti in ogni caso\n
-        - saranno introdotti i cartellini (giallo secondo fallo cumulativo) rosso quarto fallo cumulativo (giocatore fuori)\n
+        - saranno introdotti i cartellini (giallo secondo fallo cumulativo) rosso quarto fallo cumulativo (giocatore fuori per tutto il resto della partita)\n
         - al liscio del giocatore la palla passa all\'avversario\n
         - ogni volta che possono essere mossi dei giocatori prima attacco poi difesa\n
         - ogni volta che possono essere mossi dei giocatori va dichiarato da subito se si vuole muovere o no e quanto se ne muovono entro il limite massimo di spostamenti\n
@@ -99,9 +99,22 @@
         - quando l\'avversario liscia la palla, solo un giocatore in fuorigioco potrà prendere la palla\n
         - il fuorigioco vale solo dalla line di metà campo\n\n
         <b>5. Sostituzioni</b>\n\n
-        - quando un giocatore si rompe si sostituisce con un altro\n
+        - quando un giocatore si rompe si sostituisce con un altro della stessa squadra\n
         - se non ci sono altri giocatori di quella stessa squadra disponibili, si gioca con giocatori in meno\n\n
         <b>6. Goals</b>\n\n
-        -\n
+        - goal è quando la palla supera interamente la linea di porta\n
+        - se il portiere tira la palla nella sua stessa porta è autogoal\n
+        - l\'autogoal fatto da un giocatore che non sia il portiere vale da qualsiasi punto\n
+        - se un giocatore tira verso la porta avversaria da fuori l\'area di tiro ed il pallone tocca il portiere (lasciato libero e non tenuto dall\'altro giocatore) non è autogoal\n\n
+        <b>7. Palla fuori o dentro</b>\n\n
+        - la palla è fuori quando supera interamente le linee laterali o quelle di fondo\n
+        - la palla è dentro l\'area di tiro quando ha superato interamente la linea di tiro\n
+        - se la palla supera interamente la linea e rientra in campo, è fuori\n\n
+        <b>8. VAR</b>\n\n
+        - il VAR si farà tramite l\'iPad\n
+        - il VAR ha inequivocabilmente ragione ed è al di sopra della eventuale precedente decisione dell\'arbitro\n
+        - l\'arbitro può chiamare il VAR in ogni momento e quante volte vuole solo sulla situazione accaduta in quel momento\n
+        - ogni giocatore può chiamare il VAR due volte a tempo solo sulla situazione accaduta in quel momento\n
+        - se la visione del VAR non è chiara, si rimette la decisione all\'arbitro\n
     </string>
 </resources>
