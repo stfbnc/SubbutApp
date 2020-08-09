@@ -9,6 +9,8 @@ import com.android.volley.toolbox.Volley;
 
 import org.json.JSONObject;
 
+import java.util.Objects;
+
 import it.subbuteo.subbutapp.globals.Globals;
 
 public class UpdatableFragment extends Fragment implements OnDataUpdateListener {
@@ -28,13 +30,13 @@ public class UpdatableFragment extends Fragment implements OnDataUpdateListener 
     }
 
     protected void updateData(final OnDataUpdateListener listener){
-        rs = Volley.newRequestQueue(getActivity());
+        rs = Volley.newRequestQueue(Objects.requireNonNull(getActivity()));
         final DataRetriever dataRet = new DataRetriever(getActivity());
         dataRet.sendJsonRequest(rs, Globals.url, new VolleyResponseListener() {
             @Override
             public void onErrorResponse(String message) {
                 Log.d("respError", "responseError = " + message);
-                getActivity().finish();
+                Objects.requireNonNull(getActivity()).finish();
             }
 
             @Override

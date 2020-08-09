@@ -12,6 +12,7 @@ import android.widget.TextView;
 import com.google.gson.Gson;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 import it.subbuteo.subbutapp.R;
 import it.subbuteo.subbutapp.data.DataRetriever;
@@ -52,8 +53,8 @@ public class TabFragment extends Fragment {
         recyclerView.setLayoutManager(layoutManager);
 
         Bundle bundle = getArguments();
-        dayNum = bundle.get(getString(R.string.bundle_tab)).toString();
-        lst.addAll(DataRetriever.dataHashMap.get(dayNum).getMatchData());
+        dayNum = Objects.requireNonNull(bundle.get(getString(R.string.bundle_tab))).toString();
+        lst.addAll(Objects.requireNonNull(DataRetriever.dataHashMap.get(dayNum)).getMatchData());
         mAdapter = new MatchesListAdapter(lst, getActivity());
         recyclerView.setAdapter(mAdapter);
         recyclerView.addOnItemTouchListener(new RecyclerItemClickListener(getActivity(), new RecyclerItemClickListener.OnItemClickListener() {
@@ -62,7 +63,10 @@ public class TabFragment extends Fragment {
             }
         }));
 
-        String rest_player = DataRetriever.dataHashMap.get(dayNum).getRest();
+        TextView dayDate = view.findViewById(R.id.day_date);
+        dayDate.setText(Objects.requireNonNull(DataRetriever.dataHashMap.get(dayNum)).getDate());
+
+        String rest_player = Objects.requireNonNull(DataRetriever.dataHashMap.get(dayNum)).getRest();
         TextView tv_rest = view.findViewById(R.id.rest_pl);
         if(!rest_player.equals("")) {
             String txt = getString(R.string.rest_str) + " " + rest_player;
@@ -85,7 +89,7 @@ public class TabFragment extends Fragment {
 
     public void refreshData(){
         lst.clear();
-        lst.addAll(DataRetriever.dataHashMap.get(dayNum).getMatchData());
+        lst.addAll(Objects.requireNonNull(DataRetriever.dataHashMap.get(dayNum)).getMatchData());
         mAdapter.notifyDataSetChanged();
     }
 

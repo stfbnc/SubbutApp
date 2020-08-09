@@ -5,7 +5,14 @@
     <string name="navigation_drawer_item1">Campionato</string>
     <string name="navigation_drawer_item2">Champions League</string>
     <string name="navigation_drawer_item3">Coppa Italia</string>
-    <string name="navigation_drawer_item4">Regolamento</string>
+    <string name="navigation_drawer_item4">Supercoppa</string>
+    <string name="navigation_drawer_item5">Archivio</string>
+    <string name="navigation_drawer_item6">Regolamento</string>
+    <string name="navigation_drawer_item7">Costituzione</string>
+    <string name="sub_navigation_item1">Vecchi campionati</string>
+    <string name="sub_navigation_item2">Vecchie champions league</string>
+    <string name="sub_navigation_item3">Vecchie coppe italia</string>
+    <string name="sub_navigation_item4">Vecchie supercoppe</string>
     <!--Drawer open and close-->
     <string name="drawer_open">Tab a scomparsa aperta</string>
     <string name="drawer_closed">Tab a scomparsa chiusa</string>
@@ -15,8 +22,10 @@
     <string name="championship_tag">CHAMPIONSHIP</string>
     <string name="cup_tag">CUP</string>
     <string name="league_tag">LEAGUE</string>
+    <string name="supercoppa_tag">SUPERCOPPA</string>
     <string name="match_type_tag">MATCH_TYPE</string>
     <string name="day_num_tag">DAY_NUM</string>
+    <string name="day_date_tag">DATE</string>
     <string name="matches_tag">MATCHES</string>
     <string name="left_player_tag">PL1</string>
     <string name="left_res_tag">RES1</string>
@@ -31,6 +40,7 @@
     <string name="first_or_second_tag">FIRST_OR_SECOND</string>
     <string name="goals_tag">GOALS</string>
     <string name="cards_tag">CARDS</string>
+    <string name="inout_tag">IN_OUT</string>
     <string name="min_tag">MIN</string>
     <string name="player_tag">PLAYER</string>
     <string name="type_tag">TYPE</string>
@@ -42,6 +52,7 @@
     <string name="bundle_details_tag">matchInfo</string>
     <string name="bundle_single_match_tag">singleMatch</string>
     <string name="bundle_competition_type_tag">competitionType</string>
+    <string name="bundle_supercoppa_tag">supercoppa</string>
     <!--Ranking-->
     <string name="halloffame_ranking_title">ALBO D\'ORO</string>
     <string name="scored_ranking_title">MIGLIOR ATTACCO</string>
@@ -59,62 +70,214 @@
     <string name="quarters">QUARTI</string>
     <string name="semifinals">SEMIFINALI</string>
     <string name="first_final">FINALE</string>
+    <string name="second_final">FINALE_2</string>
+    <string name="second_final_text">FINALE 3 POSTO</string>
+    <!--Archive-->
+    <string name="bundle_layout">layoutToSet</string>
+    <!--Constitution-->
+    <string name="constitution">
+        <b>COSTITUZIONE DELL\'ASSOCIAZIONE ITALIANA E INTERNAZIONALE SUBBUTEA BIANCHI</b>\n
+        Costituzione approvata il 28/06/2020\n
+        \n
+        <b>Art.1</b>\n
+        L\'associazione italiana e internazionale subbutea Bianchi tutela i diritti di tutti i suoi soci, ed ha come scopo principale
+        il gioco e la diffusione del giuoco Subbuteo. Questa associazione farà tutte quante le proprie cose alla luce del sole: essa non
+        lavora con il favore delle tenebre.\n
+        \n
+        <b>Art.2</b>\n
+        L\'associazione promuove e finanzia quattro competizioni subbutee: Campionato italiano di Serie A, Coppa Italia Subbuteo, Champions
+        League Subbuteo, Supercoppa italiana del Subbuteo.\n
+        \n
+        <b>Art.3</b>\n
+        L\'associazione prevede quindi una costituzione, un regolamento per le competizioni sopra elencate, e, infine, un presidente, che
+        verrà eletto ogni due anni, un segretario, che verrà eletto ogni anno, e un grafico.\n
+        \n
+        <b>Art.4</b>\n
+        L\'associazione si riunirà annualmentead inizio giugno per discuter delle modifiche al regolamento, per i sorteggi della stagione
+        successiva e per eventuali elezioni. Ogni assemblea ordinaria verrà annunciata da un manifesto che annuncerà la data e gli
+        argomenti e da delle lettere che verranno inviate ai soci.\n
+        \n
+        <b>Art.5</b>\n
+        Il presidente potrà bandire assemblee straordinarie se verranno fatti eventuali ricorsi al regolamento dopo le modifiche ad inizio
+        giugno, oppure se si dovranno discutere alcuni argomenti che si solleveranno dentro l\'associazione. La formula di promulgazione
+        di una assemblea ordinaria verrà utilizzata anche per le assemblee straordinarie.\n
+        \n
+        <b>Art.6</b>\n
+        Tutti i soci hanno pari diritti, ma doveri diversi a seconda del ruolo:\n
+        <b>COMMA 1:</b> I soci hanno il dovere di presenziare ad ogni assemblea, di esprimere sempre la propria opinione e il proprio voto,
+        e infine di dare un proprio giudizio sulle regole ricorrendo al ricorso.\n
+        <b>COMMA 2:</b> Il grafico ha gli stessi doveri del socio semplice. Viene aggiunto però che egli dovrà occuparsi anche dell\'App.
+        Subbuteo.\n
+        <b>COMMA 3:</b> Il segretario ha gli stessi doveri del socio semplice. Viene aggiunto però che: dovrà spartirsi i compiti di organizzazione
+        con il presidente; dovrà mettere a verbale tutte le cose che accadono durante le assemblee.\n
+        <b>COMMA 4:</b> Il presidente ha gli stessi doveri del socio semplice. Viene aggiunto però che: dovrà spartirsi i compiti di
+        organizzazione con il segretario; dovrà presiedere ogni assemblea.\n
+        \n
+        <b>Art.7</b>\n
+        Qui di seguito viene riportato il contratto tra presidente e segretario:\n
+        <b>COMMA 1:</b> Io, il signor presidente, mi impegno a rispettare tutti i soci, in particolare il signore segretario, con il quale
+        condividerò i lavori di organizzazione. Tutti i suoi lavori dovranno avere la mia conferma e approvazione, mentre i miei dovranno
+        avere sempre la sua firma. I lavori saranno equamente distribuiti.\n
+        <b>COMMA 2:</b> Io, il signore segretario, mi impegno a rispettare tutti i soci, in particolare il signor presidente, con il quale
+        condividerò i lavori di organizzazione. Tutti i miei lavori dovranno avere la sua conferma, mentre io dovrò mettere una firma su
+        tutti i suoi lavori.\n
+    </string>
     <!--Rules-->
     <string name="rules">
-        <b>1. Regole fondamentali applicabili ad ogni caso</b>\n\n
-        - non si può toccare la palla più di 3 volte consecutive\n
-        - ogni squadra deve avere 11 giocatori compreso il portiere\n
-        - ci sono 2 tempi\n
-        - ogni tempo dura 10 min più ultima azione\n
-        - il giocatore può essere colpito solo ed esclusivamente con il dito non a contatto con esso, e l\'unghia rivolta verso di esso, pena il passaggio di palla all\'avversario (no schicchera) senza trascinamenti in ogni caso\n
-        - saranno introdotti i cartellini (giallo secondo fallo cumulativo) rosso quarto fallo cumulativo (giocatore fuori per tutto il resto della partita)\n
-        - al liscio del giocatore la palla passa all\'avversario\n
-        - ogni volta che possono essere mossi dei giocatori prima attacco poi difesa\n
-        - ogni volta che possono essere mossi dei giocatori va dichiarato da subito se si vuole muovere o no e quanto se ne muovono entro il limite massimo di spostamenti\n
-        - è vietato muovere più di un giocatore contemporaneamente\n
-        - il giocatore che batte un qualsiasi calcio da fermo deve essere scelto prima di effettuare spostamenti\n\n
-        <b>2. Calci da fermo</b>\n\n
-        <b>2.1 Punizioni</b>\n
-         - in caso di punizione dentro l\'area di tiro, si può posizionare una barriera di tre giocatori distante 10 cm dal punto di battuta\n
-         - punizione se fallo di mano (giuocatre sdraiato sul campo colpito)\n
-         - punizione se calciatore colpito da un giuocatore avversario\n
-         - punizione se l\'umano prende la palla con la mano\n
-         - punizione di seconda in area se il portiere para o colpisce la palla fuori dall\'area piccola\n
-         - in caso di fuorigioco\n
-         - ogni giocatore può spostare tre giocatori\n
-        <b>2.2 Calci d\'angolo</b>\n
-         - ogni giocatore può fare tre spostamenti\n
-         - niente fuorigioco\n
-         - il calcio d\'angolo vale solo se il giocatore colpito è all\'interno dell\'area di tiro\n
-        <b>2.3 Rimesse dal fondo</b>\n
-         - ogni giocatore può fare tre spostamenti\n
-         - se la palla va nell\'area di tiro avversaria passa all\'avversario, anche se tocca un giocatore all\'interno dell\'area di tiro avversaria\n
-         - il rinvio dalla rimessa di fondo deve partire dal limite dell\'area piccola\n
-        <b>2.4 Falli laterali</b>\n
-         - ogni giocatore può fare uno spostamento\n
-         - non c\'è il fuorigioco\n\n
-        <b>3. Portiere</b>\n\n
-        - non ci possono essere alla fine dell\'azione giocatori all\'interno dell\'area piccola e vanno spostati immediatamente fuori\n\n
-        <b>4. Fuorigioco</b>\n\n
-        - quando l\'avversario liscia la palla, solo un giocatore in fuorigioco potrà prendere la palla\n
-        - il fuorigioco vale solo dalla line di metà campo\n\n
-        <b>5. Sostituzioni</b>\n\n
-        - quando un giocatore si rompe si sostituisce con un altro della stessa squadra\n
-        - se non ci sono altri giocatori di quella stessa squadra disponibili, si gioca con giocatori in meno\n\n
-        <b>6. Goals</b>\n\n
-        - goal è quando la palla supera interamente la linea di porta\n
-        - se il portiere tira la palla nella sua stessa porta è autogoal\n
-        - l\'autogoal fatto da un giocatore che non sia il portiere vale da qualsiasi punto\n
-        - se un giocatore tira verso la porta avversaria da fuori l\'area di tiro ed il pallone tocca il portiere (lasciato libero e non tenuto dall\'altro giocatore) non è autogoal\n\n
-        <b>7. Palla fuori o dentro</b>\n\n
-        - la palla è fuori quando supera interamente le linee laterali o quelle di fondo\n
-        - la palla è dentro l\'area di tiro quando ha superato interamente la linea di tiro\n
-        - se la palla supera interamente la linea e rientra in campo, è fuori\n\n
-        <b>8. VAR</b>\n\n
-        - il VAR si farà tramite l\'iPad\n
-        - il VAR ha inequivocabilmente ragione ed è al di sopra della eventuale precedente decisione dell\'arbitro\n
-        - l\'arbitro può chiamare il VAR in ogni momento e quante volte vuole solo sulla situazione accaduta in quel momento\n
-        - ogni giocatore può chiamare il VAR due volte a tempo solo sulla situazione accaduta in quel momento\n
-        - se la visione del VAR non è chiara, si rimette la decisione all\'arbitro\n
+        <b>REGOLA NUMERO 1</b>\n
+        <b>La pallina</b>\n
+        - In tutte le competizioni (1) si userà la pallina piccola. Qualora non siano disponibili palline piccole non si piò giocare fino
+        a che non vengono ricomprate.\n
+        \n
+        <b>REGOLA NUMERO 2</b>\n
+        <b>I calciatori</b>\n
+        - A seguito della votazione si possono usare solo le squadre VERDI.\n
+        - Le squadre saranno composte da 10 calciatori di movimento oltre al portiere. Qualora si voglia, si potranno fare sostituzioni (2).
+        I calciatori non avranno numero.\n
+        - Qualora non ci siano altri giocatori della stessa squadra disponibili, si possono prendere giocatori di un\’altra squadra VERDE.\n
+        - I calciatori fuori dalle linee perimetrali non sono mai in gioco, ad eccezione dei calciatori che escono nel corso dell\’azione
+        e fino alla interruzione della stessa.\n
+        - I calciatori fuori dalle linee perimetrali possono rientrare nel terreno di gioco unicamente per mezzo degli spostamenti a
+        disposizione.\n
+        - Il calciatore non può toccare più di 3 volte consecutive la pallina.\n
+        - Il calciatore può essere colpito solo ed esclusivamente con il dito non a contatto con esso, e l\’unghia rivolta verso di esso,
+        pena il passaggio di palla all\’avversario (no schicchera) senza trascinamenti in ogni caso.\n
+        \n
+        <b>REGOLA NUMERO 3</b>\n
+        <b>L\'arbitro</b>\n
+        - L’arbitro sarà sorteggiato tra chi è presente prima della partita. La decisione dell\’arbitro, a seguito o meno della visione
+        del V.A.R., È INDISCUTIBILE. Solo l\’arbitro visiona il video e nessun calciatore o spettatore può interferire o parlare.\n
+        \n
+        <b>REGOLA NUMERO 4</b>\n
+        <b>La durata della gara</b>\n
+        - La gara è divisa in due tempi, ognuno da 10 minuti ciascuno. Al momento dello scadere dei dieci minuti la gara è terminata,
+        con \“l\’ultima azione\”.\n
+        - L\’ultima azione termina solamente quando la pallina esce interamente dalle linee perimetrali.\n
+        \n
+        <b>REGOLA NUMERO 5</b>\n
+        <b>L\'inizio e la ripresa del gioco</b>\n
+        - La squadra che darà il via alla gara con il calcio di inizio sarà decisa attraverso il sorteggio fatto dall\’arbitro.
+        Chi vince il sorteggio deciderà verso quale porta attaccare, mentre la squadra perdente il sorteggio darà il via alla gara con
+        il calcio d\’inizio. Per questo è necessario fare il sorteggio prima della disposizione delle squadre sul terreno di gioco.\n
+        - La squadra vincente il sorteggio darà il via al secondo tempo della gara con il calcio d\’inizio.\n
+        \n
+        <b>REGOLA NUMERO 6</b>\n
+        <b>La pallina in gioco e non in gioco</b>\n
+        - La pallina NON è più in gioco quando ha INTERAMENTE superato la linea laterale o la linea di fondo. La stessa cosa vale per l\’area
+        di tiro e per il goal: la pallina deve aver superato INTERAMENTE la linea che delimita l\’area di tiro.\n
+        \n
+        <b>REGOLA NUMERO 7</b>\n
+        <b>L\'esito della gara</b>\n
+        - CAMPIONATO: La gara termina con lo scadere del secondo tempo di gara, qualunque sia il risultato (3).\n
+        - COPPA ITALIA: Le partite dei quarti di finale saranno gare secche (NO andata e ritorno). Le pertite delle semifinali
+        saranno andata e ritorno e l\’esito della gara si determinerà alla fine della gara di ritorno. Qualora la somma del punteggio
+        di andata e del punteggio di ritorno sia di parità, la vittoria della gara sarà assegnata alla squadra che avrà segnato maggiori
+        reti IN TRASFERTA. Qualora la somma del punteggio di andata e del punteggio di ritorno sia di parità e qualora le reti segnate
+        in trasferta siano pari, l\’esito della gara si stabilirà attraverso i tiri di rigore (4).\n
+        - CHAMPIONS LEAGUE: Le gare saranno di andata e ritorno e l\’esito della gara si determinerà alla fine della gara di ritorno.
+        Qualora la somma del punteggio di andata e del punteggio di ritorno sia di parità, la vittoria della gara sarà assegnata alla
+        squadra che avrà segnato maggiori reti IN TRASFERTA. Qualora la somma del punteggio di andata e del punteggio di ritorno sia di
+        parità e qualora le reti segnate in trasferta siano pari, l\’esito della gara si stabilirà attraverso i tiri di rigore (5).\n
+        - FINALI: La gara termina con lo scadere del secondo tempo di gara. Qualora il punteggio sia di parità, l\’esito della gara
+        si stabilirà attraverso i tiri di rigore (6).\n
+        \n
+        <b>REGOLA NUMERO 8</b>\n
+        <b>Il fuorigioco</b>\n
+        - La posizione di fuorigioco è punibile solamente nella metà campo avversaria.\n
+        - Un calciatore è in posizione di fuorigioco nei seguenti casi:\n
+          • qualora si trovi tra il penultimo difendente e la linea di porta;\n
+        - È punibile:\n
+          • qualora, essendo in posizione di fuorigioco, giochi la pallina dopo un passaggio di un compagno di squadra;\n
+          •	qualora, essendo in posizione di fuorigioco, tocchi (anche non intenzionalmente) la pallina;\n
+          •	qualora, essendo in posizione di fuorigioco, giochi la pallina dopo un tocco del portiere;\n
+          •	qualora, essendo in posizione di fuorigioco, giochi la pallina dopo che questa abbia colpito il palo o la traversa.\n
+        - Fuori dalle linee perimetrali vale la semplice regola del fuorigioco.\n
+        - Non è punibile:\n
+          •	qualora, essendo in posizione di fuorigioco, giochi la pallina dopo un passaggio da parte dell\’avversario
+        (definito “retro” o “giocata”);\n
+          •	qualora, essendo in posizione di fuorigioco, giochi la pallina dopo che un giocatore avversario abbia lisciato la pallina;\n
+          •	qualora, essendo in posizione di fuorigioco, riceva la pallina da un compagno su una rimessa laterale e/o su un calcio d\’angolo.\n
+        - Un calciatore non è in posizione di fuorigioco qualora riceva un passaggio da un compagno più avanti di lui.\n
+        - Qualora un calciatore tocchi (non in modo intenzionale) la pallina su un tiro in porta (deviazione) e la pallina entri in porta,
+        la rete è da annullare.\n
+        - Il calciatore non è in fuorigioco a seguito di un tocco intenzionale, o non, di un avversario (escluso il portiere).\n
+        \n
+        <b>REGOLA NUMERO 9</b>\n
+        <b>Falli e scorrettezze</b>\n
+        - È fallo solamente quando un calciatore tocca un calciatore avversario invece che la pallina. Qualora vengano toccati
+        contemporaneamente sia la pallina che un calciatore avversario, non è mai fallo ma tocca alla squadra avversaria giocare la
+        pallina. Qualora un calciatore colpisca il portiere avversario, non è mai fallo. Se il portiere, per parare o parando un tiro
+        indirizzato in porta, esce fuori dall\’area di porta, il gesto del portiere è da considerarsi fallo ed il gioco verrà ripreso con
+        un calcio di punizione indiretto. Al secondo fallo scatta l\’ammonizione. Al quarto fallo scatta l\’espulsione. Dal quinto fallo
+        in poi è sempre ammonizione (alla seconda ammonizione è cartellino rosso – come nel calcio). È fallo quando si prende la pallina
+        con la mano (ripresa: calcio di punizione diretto).\n
+        \n
+        <b>REGOLA NUMERO 10</b>\n
+        <b>I calci di punizione</b>\n
+        - Il calcio di punizione diretto sarà battuto dal punto in cui viene commesso il fallo, qualunque sia la posizione del pallone,
+        a seguito di tre movimenti da parte dell\’attacco e della difesa (7). La stessa cosa vale per il calcio di punizione indiretto.
+        Nel calcio di punizione indiretto, però, in area di rigore, la difesa potrà posizionare tre calciatori in barriera, al posto
+        dei tre movimenti.\n
+        \n
+        <b>REGOLA NUMERO 11</b>\n
+        <b>Il calcio di rigore e i tiri di rigore</b>\n
+        - Durante la gara non esistono i tiri di rigore ma solamente i calci di rigore. Il calcio di rigore si batte SUBITO a
+        seguito del fischio dell\’arbitro. Il portiere NON può muoversi in avanti ma solamente sulla linea di porta. Qualora il
+        portiere si muova in avanti, il calcio di rigore si ripete e scatta l\’ammonizione.\n
+        \n
+        <b>REGOLA NUMERO 12</b>\n
+        <b>La rimessa dalla linea laterale</b>\n
+        - La rimessa dalla linea laterale viene battuta dopo che l\’attacco e la difesa avranno mosso un calciatore a testa.
+        Muove prima l\’attacco e dopo la difesa. La squadra che batte la rimessa dalla linea laterale, prima di muovere il giocatore,
+        deve obbligatoriamente scegliere il calciatore con cui battere (punizione: inversione della rimessa laterale).\n
+        \n
+        <b>REGOLA NUMERO 13</b>\n
+        <b>Il calcio di rinvio</b>\n
+        - Il calcio di rinvio viene battuto dopo che l\’attacco e la difesa avranno mosso tre calciatori a testa. Muove prima l\’attacco e
+        dopo la difesa. La squadra che batte la rimessa dalla linea di fondo, prima di muovere i giocatori, deve obbligatoriamente scegliere
+        il calciatore con cui battere. Qualora la pallina finisca nell\’area di tiro avversaria, anche se tocca un proprio calciatore
+        prima che vi finisca o dopo che vi si finita, sarà la squadra avversaria a dover giocare la pallina. Il calcio di rinvio può essere
+        battuto in qualsiasi punto all\’interno dell’area di porta.\n
+        \n
+        <b>REGOLA NUMERO 14</b>\n
+        <b>Il calcio d\'angolo</b>\n
+        - Il calcio d\’angolo viene battuto dopo che l\’attacco e la difesa avranno mosso tre calciatori a testa. Muove prima l\’attacco
+        e dopo la difesa. La squadra che batte il calcio d\’angolo, prima di muovere i giocatori, deve obbligatoriamente scegliere il
+        calciatore con cui battere. Sul calcio d\’angolo NON c\’è il fuorigioco.\n
+        - Se il difensore tira direttamente sul proprio fondo del campo, è sempre calcio d\’angolo.\n
+        - Se un tiro partito fuori dalla \“area di tiro\” avversaria tocca un avversario e finisce in porta, è calcio d\’angolo.\n
+        \n
+        <b>REGOLA NUMERO 15</b>\n
+        <b>Il V.A.R.</b>\n
+        - Ogni squadra ha a disposizione due chiamate al V.A.R. per ciascun tempo di gara. L\’arbitro ha chiamate illimitate. Non
+        importa chi è che fa il V.A.R., chi fa il video V.A.R. NON ha voce in capitolo. A decidere è SEMPRE e SOLO l\’arbitro, a seguito
+        della visione del V.A.R. (qualora sia chiamato in causa). La decisione dell\’arbitro è INDISCUTIBILE! Il V.A.R. si farà con
+        l\’iPad di Stefano Bianchi.\n
+        \n
+        <b>REGOLA NUMERO 16</b>\n
+        <b>L\'autogoal</b>\n
+        - È autogoal:\n
+          •	quando il portiere si tira la pallina nella sua stessa porta;\n
+          •	quando un calciatore tira volontariamente nella propria porta, da qualunque posizione.\n
+        \n
+        \n
+        <b>NOTE</b>\n
+        (1) Le squadre partecipanti della Finale Supercoppa Italiana sono la squadra Vincitrice del Campionato e la squadra Vincitrice
+        della Coppa Italia. In caso siano la stessa squadra, allora si disputerà tra la squadra vincitrice del Campionato e la squadra
+        finalista perdente della Coppa Italia.\n
+        (2) Oltre alle sostituzioni d\’obbligo in caso di rottura del giocatore.\n
+        (3) Assegnazione del punteggio in classifica: VITTORIA +3; PAREGGIO +1; SCONFITTA +/-0.\n
+        (4) Cinque (5) tiri di rigore ciascuno. Qualora alla fine dei cinque (5) tiri di rigore il punteggio sia ancora di parità,
+        si procederà ad oltranza, fino a quando una delle due squadre non sbaglierà un tiro di rigore e l\’altra segni o abbia già
+        segnato il tiro di rigore della stessa batteria di quello sbagliato dalla squadra avversaria.\n
+        (5) Cinque (5) tiri di rigore ciascuno. Qualora alla fine dei cinque (5) tiri di rigore il punteggio sia ancora di parità,
+        si procederà ad oltranza, fino a quando una delle due squadre non sbaglierà un tiro di rigore e l\’altra segni o abbia già
+        segnato il tiro di rigore della stessa batteria di quello sbagliato dalla squadra avversaria.\n
+        (6) Cinque (5) tiri di rigore ciascuno. Qualora alla fine dei cinque (5) tiri di rigore il punteggio sia ancora di parità,
+        si procederà ad oltranza, fino a quando una delle due squadre non sbaglierà un tiro di rigore e l\’altra segni o abbia già
+        segnato il tiro di rigore della stessa batteria di quello sbagliato dalla squadra avversaria.\n
+        (7) Muoverà i tre calciatori prima l\’attacco (e quindi chi batte il calcio di punizione) e poi la difesa. Prima di muovere
+        i tre calciatori, la squadra che batte il calcio di punizione deve obbligatoriamente decidere con quale calciatore battere
+        (punizione: il calcio di punizione viene invertito).\n
     </string>
 </resources>

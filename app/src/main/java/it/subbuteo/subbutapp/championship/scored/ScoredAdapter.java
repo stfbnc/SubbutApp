@@ -1,6 +1,7 @@
 package it.subbuteo.subbutapp.championship.scored;
 
 import android.content.Context;
+import android.support.annotation.NonNull;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -57,7 +58,7 @@ public class ScoredAdapter extends RecyclerView.Adapter<ScoredAdapter.ViewHolder
     }
 
     @Override
-    public void onBindViewHolder(ScoredAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ScoredAdapter.ViewHolder holder, int position) {
         if(mList.size() > 0) {
             holder.pos.setText(String.valueOf(mList.get(position).getPosition()+"."));
             holder.name.setText(mList.get(position).getName());

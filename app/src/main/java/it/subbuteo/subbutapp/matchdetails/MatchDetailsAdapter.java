@@ -1,6 +1,7 @@
 package it.subbuteo.subbutapp.matchdetails;
 
 import android.content.Context;
+import android.support.annotation.NonNull;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -44,8 +45,10 @@ public class MatchDetailsAdapter extends RecyclerView.Adapter<MatchDetailsAdapte
         detImg.put(DataRetriever.PENALTY_FAILED, R.drawable.penalty_red);
         detImg.put(DataRetriever.YELLOW_CARD, R.drawable.yellow_card);
         detImg.put(DataRetriever.RED_CARD, R.drawable.red_card);
+        detImg.put(DataRetriever.CHANGE, R.drawable.change);
     }
 
+    @NonNull
     @Override
     public MatchDetailsAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         ctx = parent.getContext();
@@ -56,10 +59,10 @@ public class MatchDetailsAdapter extends RecyclerView.Adapter<MatchDetailsAdapte
     }
 
     @Override
-    public void onBindViewHolder(MatchDetailsAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull MatchDetailsAdapter.ViewHolder holder, int position) {
         if(mList.size() > 0) {
             int min = mList.get(position).getMin();
-            String strMin = String.valueOf(min)+"'";
+            String strMin = min +"'";
             String type = mList.get(position).getType();
             if(mList.get(position).getPlayer() == DataRetriever.PLAYER_1) {
                 if(firstOrSecond.equals(DataRetriever.FIRST_MATCH)) {

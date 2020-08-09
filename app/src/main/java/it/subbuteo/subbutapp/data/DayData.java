@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class DayData {
 
     private String num = "";
+    private String date = "";
     private ArrayList<MatchData> matchData = null;
     private String rest = "";
 
@@ -14,6 +15,14 @@ public class DayData {
 
     public String getNum(){
         return num;
+    }
+
+    public void setDate(String date){
+        this.date = date;
+    }
+
+    public String getDate(){
+        return date;
     }
 
     public void setMatchData(ArrayList<MatchData> matchData){

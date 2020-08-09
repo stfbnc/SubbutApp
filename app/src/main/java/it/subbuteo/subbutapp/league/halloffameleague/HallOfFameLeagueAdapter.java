@@ -1,6 +1,8 @@
 package it.subbuteo.subbutapp.league.halloffameleague;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.support.annotation.NonNull;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -56,10 +58,11 @@ public class HallOfFameLeagueAdapter extends RecyclerView.Adapter<HallOfFameLeag
         return viewHolder;
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
-    public void onBindViewHolder(HallOfFameLeagueAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull HallOfFameLeagueAdapter.ViewHolder holder, int position) {
         if(mList.size() > 0) {
-            holder.pos.setText(String.valueOf(mList.get(position).getPosition()+"."));
+            holder.pos.setText(mList.get(position).getPosition() + ".");
             holder.name.setText(mList.get(position).getName());
             holder.wins.setText(String.valueOf(mList.get(position).getWins()));
             holder.img.setImageDrawable(ContextCompat.getDrawable(context, mList.get(position).getImg()));

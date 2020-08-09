@@ -16,5 +16,11 @@
       "PLAYER": [string] (player name),
       "IMG": [string] (team image name without extension)
     }
+  ],
+  "SUPERCOPPA": [
+    {
+      "PLAYER": [string] (player name),
+      "IMG": [string] (team image name without extension)
+    }
   ]
 }

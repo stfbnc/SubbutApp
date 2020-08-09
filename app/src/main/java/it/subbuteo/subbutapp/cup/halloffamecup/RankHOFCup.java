@@ -7,6 +7,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.Enumeration;
 import java.util.Hashtable;
+import java.util.Objects;
 
 import it.subbuteo.subbutapp.R;
 import it.subbuteo.subbutapp.data.DataRetriever;
@@ -39,7 +40,7 @@ public class RankHOFCup {
     }
 
     public boolean isCupEnded(){
-        ArrayList<MatchData> arr = DataRetriever.dataHashMapCup.get(ctx.getString(R.string.first_final)).getMatchData();
+        ArrayList<MatchData> arr = Objects.requireNonNull(DataRetriever.dataHashMapCup.get(ctx.getString(R.string.first_final))).getMatchData();
         for(int i = 0; i < arr.size(); i++){
             MatchData md = arr.get(i);
             if(md.getPl1().equals(DataRetriever.EMPTY_PLAYER) || md.getPl2().equals(DataRetriever.EMPTY_PLAYER)) {
@@ -73,7 +74,7 @@ public class RankHOFCup {
         if(isEnded) {
             String name = getWinner();
             if(mtx.containsKey(name)){
-                mtx.get(name).setWins(mtx.get(name).getWins()+1);
+                Objects.requireNonNull(mtx.get(name)).setWins(Objects.requireNonNull(mtx.get(name)).getWins()+1);
             }else{
                 HallOfFameData hof = new HallOfFameData();
                 hof.setName(name);
@@ -87,8 +88,7 @@ public class RankHOFCup {
     }
 
     public void getHOFRankOrder(Hashtable<String, HallOfFameData> ht){
-        ArrayList<HallOfFameData> arr = new ArrayList<>();
-        arr.addAll(ht.values());
+        ArrayList<HallOfFameData> arr = new ArrayList<>(ht.values());
         Collections.sort(arr, new Comparator<HallOfFameData>() {
             @Override
             public int compare(HallOfFameData h1, HallOfFameData h2) {
@@ -101,7 +101,7 @@ public class RankHOFCup {
             }
         });
         for(int i = 0; i < arr.size(); i++)
-            ht.get(arr.get(i).getName()).setPosition(arr.size()-i);
+            Objects.requireNonNull(ht.get(arr.get(i).getName())).setPosition(arr.size()-i);
     }
 
 }

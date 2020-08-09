@@ -1,6 +1,7 @@
 package it.subbuteo.subbutapp.matchdetails;
 
 import android.content.Context;
+import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
@@ -35,7 +36,7 @@ public class RecyclerItemClickListener implements RecyclerView.OnItemTouchListen
     }
 
     @Override
-    public void onTouchEvent(RecyclerView view, MotionEvent motionEvent) {}
+    public void onTouchEvent(@NonNull RecyclerView view, @NonNull MotionEvent motionEvent) {}
 
     @Override
     public void onRequestDisallowInterceptTouchEvent(boolean disallowIntercept) {}

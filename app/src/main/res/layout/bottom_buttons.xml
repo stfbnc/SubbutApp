@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="80dp"
     android:layout_gravity="center_horizontal"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
+    android:background="@color/tabs_color">
 
     <ImageButton
         android:id="@+id/scored_ranking"

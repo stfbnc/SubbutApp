@@ -1,6 +1,7 @@
 package it.subbuteo.subbutapp.cup.matches;
 
 import android.content.Context;
+import android.support.annotation.NonNull;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -54,7 +55,7 @@ public class MatchesCupAdapter extends RecyclerView.Adapter<MatchesCupAdapter.Vi
     }
 
     @Override
-    public void onBindViewHolder(MatchesCupAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull MatchesCupAdapter.ViewHolder holder, int position) {
         if(mList.size() > 0) {
             String pl1 = mList.get(position).getPl1();
             holder.lp.setText(pl1);

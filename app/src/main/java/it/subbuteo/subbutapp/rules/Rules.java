@@ -1,6 +1,9 @@
 package it.subbuteo.subbutapp.rules;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.util.DisplayMetrics;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -22,7 +25,7 @@ public class Rules {
 
     public void showRules(){
         LayoutInflater inflater = LayoutInflater.from(ctx);
-        View popupView = inflater.inflate(R.layout.rules, null);
+        @SuppressLint("InflateParams") View popupView = inflater.inflate(R.layout.rules, null);
         setDetailData(popupView);
 
         PopupWindow mpopup = new PopupWindow(popupView, LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT, true);
@@ -32,8 +35,11 @@ public class Rules {
         int width = displaymetrics.widthPixels;
         int height = displaymetrics.heightPixels;
         mpopup.setWidth(width*9/10);
-        mpopup.setHeight(height/2);
+        mpopup.setHeight(height*8/10);
         mpopup.setAnimationStyle(android.R.style.Animation_Dialog);
+        mpopup.setOutsideTouchable(true);
+        mpopup.setFocusable(true);
+        mpopup.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         mpopup.showAtLocation(popupView, Gravity.CENTER, 0, 0);
     }
 

@@ -1,6 +1,8 @@
 package it.subbuteo.subbutapp.matchdetails;
 
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.LinearLayoutManager;
@@ -52,8 +54,11 @@ public class MatchDetails {
         int width = displaymetrics.widthPixels;
         int height = displaymetrics.heightPixels;
         mpopup.setWidth(width*9/10);
-        mpopup.setHeight(height/2);
+        mpopup.setHeight(height*8/10);
         mpopup.setAnimationStyle(android.R.style.Animation_Dialog);
+        mpopup.setOutsideTouchable(true);
+        mpopup.setFocusable(true);
+        mpopup.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         mpopup.showAtLocation(popupView, Gravity.CENTER, 0, 0);
     }
 
@@ -165,6 +170,7 @@ public class MatchDetails {
             if(mdd.getFirstOrSecond().equals(matchNum)){
                 lst.addAll(mdd.getGoals());
                 lst.addAll(mdd.getCards());
+                lst.addAll(mdd.getInOut());
             }
         }
         Collections.sort(lst, new Comparator<DetailsItemData>() {

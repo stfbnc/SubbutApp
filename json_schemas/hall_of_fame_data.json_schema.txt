@@ -16,5 +16,11 @@
       "PLAYER": [string] (player name),
       "WINS": [int] (number of won competitions)
     }
+  ],
+  "SUPERCOPPA": [
+    {
+      "PLAYER": [string] (player name),
+      "WINS": [int] (number of won competitions)
+    }
   ]
 }

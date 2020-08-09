@@ -1,6 +1,7 @@
 {
   "CHAMPIONSHIP": [
     {
+      "DATE": [string] (date of the match),
       "DAY_NUM": [string] (number of the day),
       "MATCHES": [
         {
@@ -16,7 +17,7 @@
                 {
                   "MIN": [int] (score minute),
                   "PLAYER": [int] (1 for player 1, 2 for player 2),
-                  "TYPE": [string] (goal type, can be "GOAL", "AUTOGOAL", "PENALTY", "PENALTY_FAILED")
+                  "TYPE": [string] (goal type, can be "GOAL", "OWNGOAL", "PENALTY", "PENALTY_FAILED")
                 }
               ],
               "CARDS": [
@@ -24,6 +25,13 @@
                   "MIN": [int] (card minute),
                   "PLAYER": [int] (1 for player 1, 2 for player 2),
                   "TYPE": [string] (card type, can be "YELLOW", "RED")
+                }
+              ],
+              "IN_OUT": [
+                {
+                  "MIN": [int] (card minute),
+                  "PLAYER": [int] (1 for player 1, 2 for player 2),
+                  "TYPE": [string] (change type, can be "CHANGE")
                 }
               ]
             }
@@ -35,6 +43,7 @@
   ],
   "CUP": [
     {
+      "DATE": [string] (date of the match),
       "MATCH_TYPE": [string] (match type, can be "QUARTI", "SEMIFINALI", "FINALE"),
       "MATCHES": [
         {
@@ -53,7 +62,7 @@
                 {
                   "MIN": [int] (score minute),
                   "PLAYER": [int] (1 for player 1, 2 for player 2),
-                  "TYPE": [string] (goal type, can be "GOAL", "AUTOGOAL", "PENALTY", "PENALTY_FAILED")
+                  "TYPE": [string] (goal type, can be "GOAL", "OWNGOAL", "PENALTY", "PENALTY_FAILED")
                 }
               ],
               "CARDS": [
@@ -61,6 +70,13 @@
                   "MIN": [int] (card minute),
                   "PLAYER": [int] (1 for player 1, 2 for player 2),
                   "TYPE": [string] (card type, can be "YELLOW", "RED")
+                }
+              ],
+              "IN_OUT": [
+                {
+                  "MIN": [int] (card minute),
+                  "PLAYER": [int] (1 for player 1, 2 for player 2),
+                  "TYPE": [string] (change type, can be "CHANGE")
                 }
               ]
             }
@@ -71,6 +87,7 @@
   ],
   "LEAGUE": [
     {
+      "DATE": [string] (date of the match),
       "MATCH_TYPE": [string] (match type, can be "QUARTI", "SEMIFINALI", "FINALE"),
       "MATCHES": [
         {
@@ -89,7 +106,7 @@
                 {
                   "MIN": [int] (score minute),
                   "PLAYER": [int] (1 for player 1, 2 for player 2),
-                  "TYPE": [string] (goal type, can be "GOAL", "AUTOGOAL", "PENALTY", "PENALTY_FAILED")
+                  "TYPE": [string] (goal type, can be "GOAL", "OWNGOAL", "PENALTY", "PENALTY_FAILED")
                 }
               ],
               "CARDS": [
@@ -97,6 +114,53 @@
                   "MIN": [int] (card minute),
                   "PLAYER": [int] (1 for player 1, 2 for player 2),
                   "TYPE": [string] (card type, can be "YELLOW", "RED")
+                }
+              ],
+              "IN_OUT": [
+                {
+                  "MIN": [int] (card minute),
+                  "PLAYER": [int] (1 for player 1, 2 for player 2),
+                  "TYPE": [string] (change type, can be "CHANGE")
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "SUPERCOPPA": [
+    {
+      "DATE": [string] (date of the match),
+      "MATCHES": [
+        {
+          "PL1": [string] (player 1),
+          "RES1": [int] (first match result, -1 if no result),
+          "PL2": [string] (player 2),
+          "RES2": [int] (first match result, -1 if no result),
+          "LIVE1": [int] (first match, 0 if not live, 1 if live),
+          "DETAILS": [
+            {
+              "FIRST_OR_SECOND": [string] ("FIRST"for first match, "SECOND" for return match),
+              "GOALS": [
+                {
+                  "MIN": [int] (score minute),
+                  "PLAYER": [int] (1 for player 1, 2 for player 2),
+                  "TYPE": [string] (goal type, can be "GOAL", "OWNGOAL", "PENALTY", "PENALTY_FAILED")
+                }
+              ],
+              "CARDS": [
+                {
+                  "MIN": [int] (card minute),
+                  "PLAYER": [int] (1 for player 1, 2 for player 2),
+                  "TYPE": [string] (card type, can be "YELLOW", "RED")
+                }
+              ],
+              "IN_OUT": [
+                {
+                  "MIN": [int] (card minute),
+                  "PLAYER": [int] (1 for player 1, 2 for player 2),
+                  "TYPE": [string] (change type, can be "CHANGE")
                 }
               ]
             }

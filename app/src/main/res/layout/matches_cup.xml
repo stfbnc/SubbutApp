@@ -17,11 +17,10 @@
             android:measureAllChildren="false"
             android:scrollbars="none">
 
-            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            <RelativeLayout
                 android:id="@+id/matches_cup_table"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
                 android:paddingTop="20dp">
 
                 <TextView
@@ -33,7 +32,20 @@
                     android:textStyle="bold"
                     android:textSize="@dimen/res_text_size"
                     android:textColor="@android:color/black"
-                    android:layout_marginBottom="5dp"/>
+                    android:layout_marginBottom="5dp"
+                    android:layout_alignParentTop="true"/>
+
+                <TextView
+                    android:id="@+id/quarters_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/pl_text_size"
+                    android:textColor="@android:color/black"
+                    android:layout_marginBottom="5dp"
+                    android:layout_below="@id/quarters_title"/>
 
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/recycle_quarters"
@@ -43,7 +55,8 @@
                     android:paddingRight="20dp"
                     android:paddingTop="10dp"
                     android:paddingBottom="10dp"
-                    android:layout_marginBottom="5dp"/>
+                    android:layout_marginBottom="5dp"
+                    android:layout_below="@id/quarters_date"/>
 
                 <TextView
                     android:id="@+id/semifinals_title"
@@ -54,7 +67,20 @@
                     android:textStyle="bold"
                     android:textSize="@dimen/res_text_size"
                     android:textColor="@android:color/black"
-                    android:layout_marginBottom="5dp"/>
+                    android:layout_marginBottom="5dp"
+                    android:layout_below="@id/recycle_quarters"/>
+
+                <TextView
+                    android:id="@+id/semifinals_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/pl_text_size"
+                    android:textColor="@android:color/black"
+                    android:layout_marginBottom="5dp"
+                    android:layout_below="@id/semifinals_title"/>
 
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/recycle_semifinals"
@@ -64,7 +90,43 @@
                     android:paddingRight="20dp"
                     android:paddingTop="10dp"
                     android:paddingBottom="10dp"
-                    android:layout_marginBottom="5dp"/>
+                    android:layout_marginBottom="5dp"
+                    android:layout_below="@id/semifinals_date"/>
+
+                <TextView
+                    android:id="@+id/second_final_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/res_text_size"
+                    android:textColor="@android:color/black"
+                    android:layout_marginBottom="5dp"
+                    android:layout_below="@id/recycle_semifinals"/>
+
+                <TextView
+                    android:id="@+id/second_final_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/pl_text_size"
+                    android:textColor="@android:color/black"
+                    android:layout_marginBottom="5dp"
+                    android:layout_below="@id/second_final_title"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycle_second_final"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_below="@id/second_final_date"/>
 
                 <TextView
                     android:id="@+id/first_final_title"
@@ -75,7 +137,20 @@
                     android:textStyle="bold"
                     android:textSize="@dimen/res_text_size"
                     android:textColor="@android:color/black"
-                    android:layout_marginBottom="5dp"/>
+                    android:layout_marginBottom="5dp"
+                    android:layout_below="@id/recycle_second_final"/>
+
+                <TextView
+                    android:id="@+id/first_final_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/pl_text_size"
+                    android:textColor="@android:color/black"
+                    android:layout_marginBottom="5dp"
+                    android:layout_below="@id/first_final_title"/>
 
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/recycle_first_final"
@@ -85,9 +160,10 @@
                     android:paddingRight="20dp"
                     android:paddingTop="10dp"
                     android:paddingBottom="10dp"
-                    android:layout_marginBottom="5dp"/>
+                    android:layout_marginBottom="5dp"
+                    android:layout_below="@id/first_final_date"/>
 
-            </LinearLayout>
+            </RelativeLayout>
 
         </android.support.v4.widget.NestedScrollView>
 

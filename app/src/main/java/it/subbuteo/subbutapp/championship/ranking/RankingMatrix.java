@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.Enumeration;
 import java.util.Hashtable;
+import java.util.Objects;
 
 import it.subbuteo.subbutapp.data.DataRetriever;
 import it.subbuteo.subbutapp.data.DefenseData;
@@ -18,8 +19,8 @@ public class RankingMatrix {
 
     public int getNumPlayers(){
         String numDay = "1";
-        int dayPlayers = DataRetriever.dataHashMap.get(numDay).getMatchData().size() * 2;
-        if(!DataRetriever.dataHashMap.get(numDay).getRest().equals(""))
+        int dayPlayers = Objects.requireNonNull(DataRetriever.dataHashMap.get(numDay)).getMatchData().size() * 2;
+        if(!Objects.requireNonNull(DataRetriever.dataHashMap.get(numDay)).getRest().equals(""))
             dayPlayers += 1;
         return dayPlayers;
     }
@@ -31,13 +32,13 @@ public class RankingMatrix {
     public ArrayList<String> getPlayersList(){
         ArrayList<String> plList = new ArrayList<>();
         String numDay = "1";
-        ArrayList<MatchData> md = DataRetriever.dataHashMap.get(numDay).getMatchData();
+        ArrayList<MatchData> md = Objects.requireNonNull(DataRetriever.dataHashMap.get(numDay)).getMatchData();
         for(int i = 0; i < md.size(); i++){
             plList.add(md.get(i).getPl1());
             plList.add(md.get(i).getPl2());
         }
-        if(!DataRetriever.dataHashMap.get(numDay).getRest().equals(""))
-            plList.add(DataRetriever.dataHashMap.get(numDay).getRest());
+        if(!Objects.requireNonNull(DataRetriever.dataHashMap.get(numDay)).getRest().equals(""))
+            plList.add(Objects.requireNonNull(DataRetriever.dataHashMap.get(numDay)).getRest());
         return plList;
     }
 
@@ -58,7 +59,7 @@ public class RankingMatrix {
         Hashtable<String, PlayerData> mtx = initializedRnkMap(getNumPlayers());
         int days = getNumDays();
         for(int i = 0; i < days; i++) {
-            ArrayList<MatchData> arrMd = DataRetriever.dataHashMap.get(String.valueOf(i+1)).getMatchData();
+            ArrayList<MatchData> arrMd = Objects.requireNonNull(DataRetriever.dataHashMap.get(String.valueOf(i + 1))).getMatchData();
             for (int j = 0; j < arrMd.size(); j++) {
                 MatchData md = arrMd.get(j);
                 if (md.getRes1() != DataRetriever.NO_RESULT && md.getRes2() != DataRetriever.NO_RESULT) {
@@ -92,8 +93,7 @@ public class RankingMatrix {
     }
 
     public void getRankOrder(Hashtable<String, PlayerData> ht){
-        ArrayList<PlayerData> arr = new ArrayList<>();
-        arr.addAll(ht.values());
+        ArrayList<PlayerData> arr = new ArrayList<>(ht.values());
         Collections.sort(arr, new Comparator<PlayerData>() {
             @Override
             public int compare(PlayerData p1, PlayerData p2) {
@@ -121,7 +121,7 @@ public class RankingMatrix {
             }
         });
         for(int i = 0; i < arr.size(); i++)
-            ht.get(arr.get(i).getName()).setPosition(arr.size()-i);
+            Objects.requireNonNull(ht.get(arr.get(i).getName())).setPosition(arr.size()-i);
     }
 
     public Hashtable<String, DefenseData> initializedDefRnkMap(int numPl){
@@ -141,7 +141,7 @@ public class RankingMatrix {
         Hashtable<String, DefenseData> mtx = initializedDefRnkMap(getNumPlayers());
         int days = getNumDays();
         for(int i = 0; i < days; i++) {
-            ArrayList<MatchData> arrMd = DataRetriever.dataHashMap.get(String.valueOf(i+1)).getMatchData();
+            ArrayList<MatchData> arrMd = Objects.requireNonNull(DataRetriever.dataHashMap.get(String.valueOf(i + 1))).getMatchData();
             for (int j = 0; j < arrMd.size(); j++) {
                 MatchData md = arrMd.get(j);
                 if (md.getRes1() != DataRetriever.NO_RESULT && md.getRes2() != DataRetriever.NO_RESULT) {
@@ -157,8 +157,7 @@ public class RankingMatrix {
     }
 
     public void getDefenseRankOrder(Hashtable<String, DefenseData> ht){
-        ArrayList<DefenseData> arr = new ArrayList<>();
-        arr.addAll(ht.values());
+        ArrayList<DefenseData> arr = new ArrayList<>(ht.values());
         Collections.sort(arr, new Comparator<DefenseData>() {
             @Override
             public int compare(DefenseData d1, DefenseData d2) {
@@ -171,7 +170,7 @@ public class RankingMatrix {
             }
         });
         for(int i = 0; i < arr.size(); i++)
-            ht.get(arr.get(i).getName()).setPosition(i+1);
+            Objects.requireNonNull(ht.get(arr.get(i).getName())).setPosition(i+1);
     }
 
     public Hashtable<String, ScoredData> initializedScoRnkMap(int numPl){
@@ -191,7 +190,7 @@ public class RankingMatrix {
         Hashtable<String, ScoredData> mtx = initializedScoRnkMap(getNumPlayers());
         int days = getNumDays();
         for(int i = 0; i < days; i++) {
-            ArrayList<MatchData> arrMd = DataRetriever.dataHashMap.get(String.valueOf(i+1)).getMatchData();
+            ArrayList<MatchData> arrMd = Objects.requireNonNull(DataRetriever.dataHashMap.get(String.valueOf(i + 1))).getMatchData();
             for (int j = 0; j < arrMd.size(); j++) {
                 MatchData md = arrMd.get(j);
                 if (md.getRes1() != DataRetriever.NO_RESULT && md.getRes2() != DataRetriever.NO_RESULT) {
@@ -207,8 +206,7 @@ public class RankingMatrix {
     }
 
     public void getScoredRankOrder(Hashtable<String, ScoredData> ht){
-        ArrayList<ScoredData> arr = new ArrayList<>();
-        arr.addAll(ht.values());
+        ArrayList<ScoredData> arr = new ArrayList<>(ht.values());
         Collections.sort(arr, new Comparator<ScoredData>() {
             @Override
             public int compare(ScoredData s1, ScoredData s2) {
@@ -221,7 +219,7 @@ public class RankingMatrix {
             }
         });
         for(int i = 0; i < arr.size(); i++)
-            ht.get(arr.get(i).getName()).setPosition(arr.size()-i);
+            Objects.requireNonNull(ht.get(arr.get(i).getName())).setPosition(arr.size()-i);
     }
 
     public int getCumulativeMatchesNumber(){
@@ -231,7 +229,7 @@ public class RankingMatrix {
         if(enPl != null){
             while(enPl.hasMoreElements()){
                 String name = enPl.nextElement();
-                cumMtcNum += ht.get(name).getPlayed();
+                cumMtcNum += Objects.requireNonNull(ht.get(name)).getPlayed();
             }
         }
         return cumMtcNum;
@@ -244,7 +242,7 @@ public class RankingMatrix {
         if(enu != null){
             while(enu.hasMoreElements()){
                 String n = enu.nextElement();
-                int pos = ht.get(n).getPosition();
+                int pos = Objects.requireNonNull(ht.get(n)).getPosition();
                 if(pos == 1){
                     name = n;
                     break;
@@ -255,10 +253,7 @@ public class RankingMatrix {
     }
 
     public boolean isNumPlayersEven(){
-        if(getNumPlayers() % 2 == 0)
-            return true;
-        else
-            return false;
+        return getNumPlayers() % 2 == 0;
     }
 
     public boolean isChampionshipEnded(){
@@ -293,7 +288,7 @@ public class RankingMatrix {
         if(isEnded) {
             String name = getFirstPlayer();
             if(mtx.containsKey(name)){
-                mtx.get(name).setWins(mtx.get(name).getWins()+1);
+                Objects.requireNonNull(mtx.get(name)).setWins(Objects.requireNonNull(mtx.get(name)).getWins()+1);
             }else{
                 HallOfFameData hof = new HallOfFameData();
                 hof.setName(name);
@@ -307,8 +302,7 @@ public class RankingMatrix {
     }
 
     public void getHOFRankOrder(Hashtable<String, HallOfFameData> ht){
-        ArrayList<HallOfFameData> arr = new ArrayList<>();
-        arr.addAll(ht.values());
+        ArrayList<HallOfFameData> arr = new ArrayList<>(ht.values());
         Collections.sort(arr, new Comparator<HallOfFameData>() {
             @Override
             public int compare(HallOfFameData h1, HallOfFameData h2) {
@@ -321,7 +315,7 @@ public class RankingMatrix {
             }
         });
         for(int i = 0; i < arr.size(); i++)
-            ht.get(arr.get(i).getName()).setPosition(arr.size()-i);
+            Objects.requireNonNull(ht.get(arr.get(i).getName())).setPosition(arr.size()-i);
     }
 
 }

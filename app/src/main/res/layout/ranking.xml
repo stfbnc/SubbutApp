@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        <LinearLayout
             android:id="@+id/ranking_table"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -36,19 +36,21 @@
                 android:measureAllChildren="false"
                 android:scrollbars="none">
 
-                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
-                    <TableLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+                    <TableLayout
                         android:id="@+id/ranking_header"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:paddingLeft="20dp"
                         android:paddingRight="20dp"
                         android:paddingTop="10dp"
-                        android:paddingBottom="10dp">
+                        android:paddingBottom="10dp"
+                        android:shrinkColumns="*"
+                        android:stretchColumns="*">
 
                         <TableRow
                             android:id="@+id/ranking_tags_row"

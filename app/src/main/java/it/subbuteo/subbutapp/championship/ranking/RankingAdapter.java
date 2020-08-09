@@ -1,6 +1,8 @@
 package it.subbuteo.subbutapp.championship.ranking;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.support.annotation.NonNull;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -50,10 +52,11 @@ public class RankingAdapter extends RecyclerView.Adapter<RankingAdapter.ViewHold
         return viewHolder;
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
-    public void onBindViewHolder(RankingAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull RankingAdapter.ViewHolder holder, int position) {
         if(mList.size() > 0) {
-            holder.pos.setText(String.valueOf(mList.get(position).getPosition()+"."));
+            holder.pos.setText(mList.get(position).getPosition() + ".");
             holder.name.setText(mList.get(position).getName());
             holder.points.setText(String.valueOf(mList.get(position).getPoints()));
             holder.playedMatches.setText(String.valueOf(mList.get(position).getPlayed()));

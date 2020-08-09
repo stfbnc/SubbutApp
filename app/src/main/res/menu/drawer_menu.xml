@@ -11,7 +11,36 @@
             android:icon="@drawable/cup_img"
             android:title="@string/navigation_drawer_item3"/>
         <item android:id="@+id/nav_item4"
-            android:icon="@drawable/rules_img"
+            android:icon="@drawable/supercoppa_img"
             android:title="@string/navigation_drawer_item4"/>
+        <item android:id="@+id/nav_item6"
+            android:icon="@drawable/rules_img"
+            android:title="@string/navigation_drawer_item6"/>
+        <item android:id="@+id/nav_item7"
+            android:icon="@drawable/costituzione_img"
+            android:title="@string/navigation_drawer_item7"/>
     </group>
+
+    <item
+        android:id="@+id/nav_item5"
+        android:title="@string/navigation_drawer_item5">
+        <menu>
+            <item
+                android:id="@+id/archivio_camp"
+                android:icon="@drawable/archivio_camp"
+                android:title="@string/sub_navigation_item1" />
+            <item
+                android:id="@+id/archivio_cl"
+                android:icon="@drawable/archivio_cl"
+                android:title="@string/sub_navigation_item2" />
+            <item
+                android:id="@+id/archivio_ci"
+                android:icon="@drawable/archivio_ci"
+                android:title="@string/sub_navigation_item3" />
+            <item
+                android:id="@+id/archivio_sc"
+                android:icon="@drawable/archivio_sc"
+                android:title="@string/sub_navigation_item4" />
+        </menu>
+    </item>
 </menu>
