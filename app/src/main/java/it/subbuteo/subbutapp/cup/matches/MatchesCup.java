@@ -95,13 +95,13 @@ public class MatchesCup extends UpdatableFragment {
         TextView sfView = v.findViewById(R.id.second_final_title);
         sfView.setText(getString(R.string.second_final_text));
         TextView sfDate = v.findViewById(R.id.second_final_date);
-        sfDate.setText(Objects.requireNonNull(DataRetriever.dataHashMapLeague.get(getString(R.string.second_final))).getDate());
+        sfDate.setText(Objects.requireNonNull(DataRetriever.dataHashMapCup.get(getString(R.string.second_final))).getDate());
         RecyclerView recyclerView_sf = v.findViewById(R.id.recycle_second_final);
         recyclerView_sf.setHasFixedSize(true);
         RecyclerView.LayoutManager layoutManager_sf = new LinearLayoutManager(getActivity());
         recyclerView_sf.setLayoutManager(layoutManager_sf);
         getsfList();
-        sfAdapter = new MatchesLeagueAdapter(sfList, true);
+        sfAdapter = new MatchesCupAdapter(sfList, true);
         recyclerView_sf.setAdapter(sfAdapter);
         recyclerView_sf.addOnItemTouchListener(new RecyclerItemClickListener(getActivity(), new RecyclerItemClickListener.OnItemClickListener() {
             @Override public void onItemClick(View view, int position) {
@@ -155,7 +155,7 @@ public class MatchesCup extends UpdatableFragment {
     }
 
     private void getsfList(){
-        sfList.addAll(Objects.requireNonNull(DataRetriever.dataHashMapLeague.get(getString(R.string.second_final))).getMatchData());
+        sfList.addAll(Objects.requireNonNull(DataRetriever.dataHashMapCup.get(getString(R.string.second_final))).getMatchData());
     }
 
     private void getffList(){
